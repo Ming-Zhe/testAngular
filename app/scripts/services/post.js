@@ -1,5 +1,6 @@
 'use strict';
 
-app.factory('Post', function($resource){
-  return $resource('https://ming-zhe.firebaseio.com/posts/:id.json');
-})
+app.factory('Post', function($firebase, FIREBASE_URL){
+  var ref = new Firebase(FIREBASE_URL + 'posts');
+  var posts = $firebase(ref);
+});

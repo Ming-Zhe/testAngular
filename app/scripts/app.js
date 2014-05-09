@@ -6,7 +6,8 @@ var app = angular.module('testAngularApp',[
   'ngSanitize',
   'ngRoute',
   'firebase'
-]);
+]).constant('FIREBASE_URL', 'https://ming-zhe.firebaseio.com/');
+
 app.config(function($routeProvider){
   $routeProvider
     .when('/', {
